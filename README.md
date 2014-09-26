@@ -82,7 +82,7 @@ If you want to build this project for ARM, do as follows:
 
 - build AVOSCloud C++ SDK
 
-		$ cd lib/jsoncpp
+		$ cd lib/cpp-sdk
 		$ mkdir cpp-sdk-build
 		$ cd cpp-sdk-build
 		$ cmake .. -DCMAKE_BUILD_TYPE=Debug -DMAKE_TOOLCHAIN_FILE=../ToolchainARM.cmake
