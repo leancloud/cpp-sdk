@@ -10,8 +10,10 @@
 using namespace std;
 using namespace avoscloud;
 
+#error replace ${appId} and ${appKey} with real appId and appKey
+
 BOOST_AUTO_TEST_CASE(AVQuery_FindObjects_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
   AVQuery *query = AVQuery::queryWithClassName("Student");
   query->whereKeyEqualTo("age", 27);
   query->limit = 10;
@@ -24,7 +26,7 @@ BOOST_AUTO_TEST_CASE(AVQuery_FindObjects_Test) {
 }
 
 BOOST_AUTO_TEST_CASE(AVQuery_CountObjects_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
   AVQuery *query = AVQuery::queryWithClassName("Student");
   query->whereKeyEqualTo("age", 27);
   query->limit = 10;
@@ -38,7 +40,7 @@ BOOST_AUTO_TEST_CASE(AVQuery_CountObjects_Test) {
 }
 
 BOOST_AUTO_TEST_CASE(AVQuery_OrSubQueries_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
 
   AVQuery *query1 = AVQuery::queryWithClassName("Student");
   query1->whereKeyEqualTo("age", 27);
@@ -62,7 +64,7 @@ BOOST_AUTO_TEST_CASE(AVQuery_OrSubQueries_Test) {
 }
 
 BOOST_AUTO_TEST_CASE(AVQuery_AndSubQueries_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
 
   AVQuery *query1 = AVQuery::queryWithClassName("Student");
   query1->whereKeyEqualTo("age", 27);

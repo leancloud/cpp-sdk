@@ -10,8 +10,10 @@
 using namespace std;
 using namespace avoscloud;
 
+#error replace ${appId} and ${appKey} with real appId and appKey
+
 BOOST_AUTO_TEST_CASE(AVUser_SignUp_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
 
   AVUser* user = AVUser::user();
   user->username = "cyang123321";
@@ -27,7 +29,7 @@ BOOST_AUTO_TEST_CASE(AVUser_SignUp_Test) {
 }
 
 BOOST_AUTO_TEST_CASE(AVUser_Login_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
 
   AVUser* user = AVUser::user();
   user->username = "cyang123321";
@@ -45,7 +47,7 @@ BOOST_AUTO_TEST_CASE(AVUser_Login_Test) {
 }
 
 BOOST_AUTO_TEST_CASE(AVUser_UpdatePassword_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
 
   AVUser* user = AVUser::user();
   user->username = "cyang123321";
@@ -68,7 +70,7 @@ BOOST_AUTO_TEST_CASE(AVUser_UpdatePassword_Test) {
 }
 
 BOOST_AUTO_TEST_CASE(AVUser_RequestPasswordResetForEmail_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
 
   AVUser* user = AVUser::user();
   user->username = "cyang123321";

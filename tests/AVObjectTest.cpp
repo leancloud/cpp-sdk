@@ -9,6 +9,8 @@
 using namespace std;
 using namespace avoscloud;
 
+#error replace ${appId} and ${appKey} with real appId and appKey
+
 BOOST_AUTO_TEST_CASE(AVObject_SetObject_Test) {
   AVObject* object = AVObject::objectWithClassName("Post");
   object->setObjectForKey("cyang", "name");
@@ -31,7 +33,7 @@ BOOST_AUTO_TEST_CASE(AVObject_RemoveObject_Test) {
 }
 
 BOOST_AUTO_TEST_CASE(AVObject_SaveInBackground_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
   AVObject* object = AVObject::objectWithClassName("Post");
   object->setObjectForKey("cyang", "name");
   object->setObjectForKey(27, "age");
@@ -44,7 +46,7 @@ BOOST_AUTO_TEST_CASE(AVObject_SaveInBackground_Test) {
 }
 
 BOOST_AUTO_TEST_CASE(AVObject_SaveObjectInBackgroundWithCallback_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
   AVObject* object = AVObject::objectWithClassName("Post");
   object->setObjectForKey("cyang", "name");
   object->setObjectForKey(27, "age");
@@ -58,7 +60,7 @@ BOOST_AUTO_TEST_CASE(AVObject_SaveObjectInBackgroundWithCallback_Test) {
 }
 
 BOOST_AUTO_TEST_CASE(AVObject_UpdateObject_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
   AVObject* object = AVObject::objectWithClassName("post");
   object->objectId = "53e9dc19e4b08d999ea69659";
   object->fetch();
@@ -71,7 +73,7 @@ BOOST_AUTO_TEST_CASE(AVObject_UpdateObject_Test) {
 }
 
 BOOST_AUTO_TEST_CASE(AVObject_SaveAllInBackground_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
   std::vector<AVObject*> objects;
 
   for (int i = 0; i < 2; ++i)
@@ -93,7 +95,7 @@ BOOST_AUTO_TEST_CASE(AVObject_SaveAllInBackground_Test) {
 }
 
 BOOST_AUTO_TEST_CASE(AVObject_SaveAllInBackgroundWithCallback_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
   std::vector<AVObject*> objects;
 
   for (int i = 10; i < 12; ++i)
@@ -116,7 +118,7 @@ BOOST_AUTO_TEST_CASE(AVObject_SaveAllInBackgroundWithCallback_Test) {
 }
 
 BOOST_AUTO_TEST_CASE(AVObject_fetch_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
   AVObject* object = AVObject::objectWithClassName("Post");
   object->objectId = "53e9cff1e4b0648828d795cb";
   object->fetch();
@@ -126,7 +128,7 @@ BOOST_AUTO_TEST_CASE(AVObject_fetch_Test) {
 }
 
 BOOST_AUTO_TEST_CASE(AVObject_PointerType_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
   AVObject* object = AVObject::objectWithClassName("Post");
   object->objectId = "53e9cff1e4b0648828d795cb";
   object->fetch();
@@ -142,7 +144,7 @@ BOOST_AUTO_TEST_CASE(AVObject_PointerType_Test) {
 }
 
 BOOST_AUTO_TEST_CASE(AVObject_DeleteObject_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
   AVObject* object = AVObject::objectWithClassName("Armor");
   object->saveInBackground();
 
@@ -154,7 +156,7 @@ BOOST_AUTO_TEST_CASE(AVObject_DeleteObject_Test) {
 }
 
 BOOST_AUTO_TEST_CASE(AVObject_GeoType_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
 
   AVObject* object = AVObject::objectWithClassName("Armor");
   AVGeoPoint* point = AVGeoPoint::geoPointWithLatitudeAndLongitude(39.9139, 116.3917);
@@ -169,7 +171,7 @@ BOOST_AUTO_TEST_CASE(AVObject_GeoType_Test) {
 }
 
 BOOST_AUTO_TEST_CASE(AVObject_AddRelationForKey_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
 
   AVObject* student = AVObject::objectWithClassName("Student");
   student->setObjectForKey("cyang", "name");
@@ -190,7 +192,7 @@ BOOST_AUTO_TEST_CASE(AVObject_AddRelationForKey_Test) {
 }
 
 BOOST_AUTO_TEST_CASE(AVObject_RemoveRelationForKey_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
 
   AVObject* student = AVObject::objectWithClassName("Student");
   student->setObjectForKey("cyang", "name");

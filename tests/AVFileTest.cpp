@@ -10,8 +10,11 @@
 using namespace std;
 using namespace avoscloud;
 
+#error replace ${appId} and ${appKey} with real appId and appKey
+
 BOOST_AUTO_TEST_CASE(AVFile_SaveFile_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
   AVFile* file = AVFile::fileWithPath("/Users/yangchaozhong/Downloads/avatar.jpeg");
 
   file->saveInBackgroundWithCallback([&](bool const& succeeded, AVError const& error){
@@ -24,7 +27,7 @@ BOOST_AUTO_TEST_CASE(AVFile_SaveFile_Test) {
 }
 
 BOOST_AUTO_TEST_CASE(AVFile_FetchFile_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
   AVFile* file = AVFile::fileWithUrl("http://ac-rucl8605.qiniudn.com/uuFoyM4Y2Ba6ObhC.jpeg");
   std::string path("/Users/yangchaozhong/avatar.jpeg");
   file->fetchFileDataIntoPath(path);

@@ -9,8 +9,10 @@
 using namespace std;
 using namespace avoscloud;
 
+#error replace ${appId} and ${appKey} with real appId and appKey
+
 BOOST_AUTO_TEST_CASE(AVACL_SetReadAndWriteAccess_Test) {
-  AVOSCloud::setApplicationId("rucl8605ver7n0o9ns5bg2yj6q9fwaw5v2gi7jtu8pjqiabm", "6455krb6zjawnn8mpruapvdltshmilny012u4yeys3tgusfd");
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
   AVObject* object = AVObject::objectWithClassName("Post");
   object->setObjectForKey("cyang", "name");
   object->setObjectForKey(27, "age");
