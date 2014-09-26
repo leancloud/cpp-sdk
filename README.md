@@ -2,12 +2,12 @@ cpp-sdk
 =======
 AVOSCloud C++ SDK.
 
-how to set up a playground on Mac OS X
+How to set up a playground on Mac OS X
 ======================================
 
 The instructions below have been tested only on Mavericks.
 
-prerequisites
+Prerequisites
 -------------
 
 - homebrew, a package management tool for Mac OS X
@@ -27,7 +27,7 @@ prerequisites
 
 	    brew install boost
 
-build
+Build
 -----
 
 We use `cmake` to build our C++ SDK
@@ -90,7 +90,7 @@ If you want to build this project for ARM, do as follows:
 		
 More about `CMake Cross Compiling` is [here](http://www.cmake.org/Wiki/CMake_Cross_Compiling).
         
-docs
+Docs
 ----
 We can generate cpp api docs using doxygen.
 
@@ -99,14 +99,14 @@ We can generate cpp api docs using doxygen.
 
 Then, a `docs` directory will be generated.
 
-code style
+Code style
 ----------
 Usually, we try to follow the google-cpp-code-style. There is a tool named as [cpplint.py](http://google-styleguide.googlecode.com/svn/trunk/cpplint/cpplint.py) that reads source files and identifies many style errors. We can check the code sytle of our project by the following command:
 
 		scripts/check-cpp-code-style.sh
 
 
-high-level file hierarchy
+High-level file hierarchy
 =========================
 
 - `include`: header files of AVOSCloud
@@ -126,9 +126,16 @@ high-level file hierarchy
 - `CMakeLists.txt`: cmake script which will be used to generate Makefile
 
 
-contact
+Contact
 =======
 
 If you have any question about the cpp-sdk for AVOSCloud, please contact
 
     Chaozhong Yang <cyang@avoscloud.com>
+    
+License
+=======
+
+Distributed under `GNU Lesser General Public License` .
+
+    
