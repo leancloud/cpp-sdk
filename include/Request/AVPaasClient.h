@@ -23,7 +23,6 @@
 #include "AVObject/AVObject.h"
 #include "User/AVUser.h"
 #include "ACL/AVACL.h"
-#include "Push/AVInstallation.h"
 
 NS_AV_BEGIN
 
@@ -46,7 +45,6 @@ public:
   AVUser* currentUser;
   AVACL* defaultACL;
   bool currentUserAccessForDefaultACL;
-  AVInstallation currentInstallation;
   int timeoutInterval;
   bool productionMode;
   bool isLastModify;
