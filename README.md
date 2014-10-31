@@ -1,6 +1,4 @@
-cpp-sdk
-=======
-AVOSCloud C++ SDK.
+LeanCloud C++ SDK
 
 How to set up a playground on Mac OS X
 ======================================
