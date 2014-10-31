@@ -1,12 +1,10 @@
 # LeanCloud C++ SDK
 
-How to set up a playground on Mac OS X
-======================================
+## How to set up a playground on Mac OS X
 
 The instructions below have been tested only on Mavericks.
 
-Prerequisites
--------------
+## Prerequisites
 
 - homebrew, a package management tool for Mac OS X
 
@@ -25,8 +23,7 @@ Prerequisites
 
 	    brew install boost
 
-Build
------
+## Build
 
 We use `cmake` to build our C++ SDK
 
@@ -88,8 +85,8 @@ If you want to build this project for ARM, do as follows:
 		
 More about `CMake Cross Compiling` is [here](http://www.cmake.org/Wiki/CMake_Cross_Compiling).
         
-Docs
-----
+### Docs
+
 We can generate cpp api docs using doxygen.
 
 		$ cd cpp-sdk
@@ -97,15 +94,14 @@ We can generate cpp api docs using doxygen.
 
 Then, a `docs` directory will be generated.
 
-Code style
-----------
+### Code style
+
 Usually, we try to follow the google-cpp-code-style. There is a tool named as [cpplint.py](http://google-styleguide.googlecode.com/svn/trunk/cpplint/cpplint.py) that reads source files and identifies many style errors. We can check the code sytle of our project by the following command:
 
 		scripts/check-cpp-code-style.sh
 
 
-High-level file hierarchy
-=========================
+## High-level file hierarchy
 
 - `include`: header files of AVOSCloud
 
@@ -124,16 +120,12 @@ High-level file hierarchy
 - `CMakeLists.txt`: cmake script which will be used to generate Makefile
 
 
-Contact
-=======
+## Contact
 
 If you have any question about the cpp-sdk for AVOSCloud, please contact
 
     Chaozhong Yang <cyang@avoscloud.com>
     
-License
-=======
+## License
 
 Distributed under `GNU Lesser General Public License` .
-
-    
