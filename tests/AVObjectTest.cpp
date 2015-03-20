@@ -12,6 +12,7 @@ using namespace avoscloud;
 #error replace ${appId} and ${appKey} with real appId and appKey
 
 BOOST_AUTO_TEST_CASE(AVObject_SetObject_Test) {
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
   AVObject* object = AVObject::objectWithClassName("Post");
   object->setObjectForKey("cyang", "name");
   object->setObjectForKey(27, "age");
@@ -22,6 +23,7 @@ BOOST_AUTO_TEST_CASE(AVObject_SetObject_Test) {
 }
 
 BOOST_AUTO_TEST_CASE(AVObject_RemoveObject_Test) {
+  AVOSCloud::setApplicationId("${appId}", "${appKey}");
   AVObject* object = AVObject::objectWithClassName("Post");
   object->setObjectForKey("cyang", "name");
   object->setObjectForKey(27, "age");
