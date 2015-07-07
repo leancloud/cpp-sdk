@@ -85,7 +85,7 @@ namespace StringUtils {
   }
 
   inline std::string getFileNameFromPath(std::string const & path) {
-    unsigned found = path.find_last_of("/\\");
+    std::size_t found = path.find_last_of("/\\");
 
     if (found != std::string::npos) {
       return path.substr(found + 1);
@@ -96,7 +96,7 @@ namespace StringUtils {
   }
 
   inline std::string getExtentionFromFileName(std::string const & name) {
-    unsigned found = name.find_last_of(".");
+    std::size_t found = name.find_last_of(".");
     if (found != std::string::npos) {
       return name.substr(found + 1);
     }

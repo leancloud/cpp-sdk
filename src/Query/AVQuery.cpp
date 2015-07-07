@@ -17,13 +17,13 @@
 NS_AV_BEGIN
 
 AVQuery::AVQuery():className(),
-                   limit(0),
-                   skip(0),
                    parameters(Json::Value(Json::objectValue)),
                    where(Json::Value(Json::objectValue)),
                    selectedKeys(),
                    include(),
-                   order() {
+                   order(),
+                   limit(0),
+                   skip(0) {
 }
 
 AVQuery* AVQuery::orQueryWithSubqueries(std::vector<AVQuery*> queries) {

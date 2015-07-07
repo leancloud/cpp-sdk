@@ -21,9 +21,9 @@ NS_AV_BEGIN
 
 using boost::any_cast;
 
-AVObject::AVObject():addedRelationData(),
-                     removedRelationData(),
-                     objectId() {
+AVObject::AVObject():objectId(),
+	             addedRelationData(),
+                     removedRelationData() {
 }
 
 AVObject* AVObject::objectWithClassName(std::string const & className) {
