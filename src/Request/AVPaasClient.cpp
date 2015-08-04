@@ -30,7 +30,7 @@ std::recursive_mutex AVPaasClient::_lock;
 
 AVPaasClient::AVPaasClient()
     :clientImpl(),
-     baseURL("https://cn.avoscloud.com"),
+     baseURL("https://api.leancloud.cn"),
      apiVersion(API_VERSION),
      apiKeyField("X-avoscloud-Application-Key"),
      applicationIdField("X-avoscloud-Application-Id"),
@@ -67,11 +67,11 @@ bool AVPaasClient::isUrulu() {
 }
 
 void AVPaasClient::useAVOSCloudUS() {
-  this->baseURL = "https://us.avoscloud.com";
+  this->baseURL = "https://us-api.leancloud.cn";
 }
 
 void AVPaasClient::useAVOSCloudCN() {
-  this->baseURL = "https://cn.avoscloud.com";
+  this->baseURL = "https://api.leancloud.cn";
 }
 
 void AVPaasClient::useServer(std::string const & baseURL) {
