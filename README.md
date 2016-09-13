@@ -8,8 +8,7 @@ The instructions below have been tested only on Mavericks.
 
 - homebrew, a package management tool for Mac OS X
 
-	    ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
-
+        ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
 
 - CMake, the cross-platform, open-source build system
 
@@ -23,30 +22,21 @@ The instructions below have been tested only on Mavericks.
 
 	    brew install boost
 
+- asio, cross-platform C++ Library for asynchronous programming
+
+        brew install asio
+
+- cpp-netlib, C++ libraries for high level network programming
+
+        brew install cpp-netlib
+
+- jsoncpp, library for interacting with JSON
+
+        brew install jsoncpp
+
 ## Build
 
 We use `cmake` to build our C++ SDK
-
-- Get git submodules
-		
-		$ git submodule init
-		$ git submodule update
-
-- build and install cpp-netlib
-
-		$ cd lib/cpp-netlib
-		$ mkdir cpp-netlib-build
-		$ cd cpp-netlib-build
-		$ cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
-		$ make -j4 && make install
-
-- build and install jsoncpp
-
-		$ cd lib/jsoncpp
-		$ mkdir jsoncpp-build
-		$ cd jsoncpp-build
-		$ cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
-		$ make -j4 && make install
 
 - build AVOSCloud C++ SDK
 
@@ -54,10 +44,14 @@ We use `cmake` to build our C++ SDK
 		$ mkdir cpp-sdk-build
         $ cd cpp-sdk-build
         $ cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
-        $ make -j4 && make install
-
+        $ make -j4
 
 If you want to build this project for ARM, do as follows:
+
+- Get git submodules
+		
+		$ git submodule init
+		$ git submodule update
 
 - build and install cpp-netlib for ARM
 
@@ -81,7 +75,7 @@ If you want to build this project for ARM, do as follows:
 		$ mkdir cpp-sdk-build
 		$ cd cpp-sdk-build
 		$ cmake .. -DCMAKE_BUILD_TYPE=Debug -DMAKE_TOOLCHAIN_FILE=../ToolchainARM.cmake
-		$ make -j4 && make install
+		$ make -j4
 		
 More about `CMake Cross Compiling` is [here](http://www.cmake.org/Wiki/CMake_Cross_Compiling).
         
